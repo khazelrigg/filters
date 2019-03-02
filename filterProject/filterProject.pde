@@ -206,34 +206,34 @@ void checkFilterButton(int x, int y) {
         filterThree();
         break;
       case 3:
-        println("filter 4");
+        println("filter 7");
         filterSeven();
         break;
       case 4:
-        println("filter 5");
+        println("filter 6");
         filterSix();
         break;
       }
     } else {
       switch(row) {
       case 0:
-        println("filter 6");
+        println("filter 5");
         filterFive();
         break;
       case 1:
-        println("filter 7");
+        println("grayscale");
         grayScale();
         break;
       case 2:
-        println("filter 8");
+        println("filter 4");
         filterFour();
         break;
       case 3:
-        println("filter 9");
+        println("filter 8");
         filterEight();
         break;
       case 4:
-        println("filter 10");
+        println("reset");
         resetTheImage();
         break;
       }
@@ -313,7 +313,6 @@ void filterThree() {
   for (int x = 0; x < img.width - 1; x++) {
     for (int y = 0; y < img.height; y++) {
       int loc = x + (y * img.width);
-      noStroke();
       if (((x/size)+(y/size)) % 2 == 0) {
         img.pixels[loc] = img.pixels[loc] * 3;
       } else {
